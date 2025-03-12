@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="li-time-popup" id="mainDiv">
+      <div class="li-day-nigh-icon">
+        <img id="sunIcon" src="./sun.svg" alt="sun icon" />
+        <img id="moonIcon" src="./moon.svg" alt="moon icon" />
+      </div>
+      <div class="li-title">
+        <span>Urvish</span>
+        <h2>Urvish</h2>
+      </div>
+      <div class="li-calendar-date">
+        <img
+          class="li-calendar-icon color"
+          src="./calendar.svg"
+          alt="calendar"
+        />
+        <img
+          class="li-calendar-icon white"
+          src="./calendar_white.svg"
+          alt="calendar"
+        />
+        <span id="todayDate" class="li-today-date"></span>
+      </div>
+      <div class="li-statistics-container">
+        <div class="li-time-row">
+          <span>Completes at:</span>
+          <span id="completesAt"></span>
+        </div>
+        <div class="li-time-row">
+          <span>Working Hours: </span>
+          <span
+            data-title="ગમ્મે એટલી વાર જુઓ વાર લાગતી હોય એટલી જ લાગે"
+            id="t_working_hour"
+          ></span>
+        </div>
+        <div class="li-time-row">
+          <span>Today’s Remaining Hours:</span>
+          <span data-title="ગણતરી કરુ છુ એક મીનીટ" id="todaysRemaining"></span>
+        </div>
+        <div class="li-time-row">
+          <span>Week’s Remaining Hours: </span>
+          <span
+            data-title="શુ પણ હાલી નિકળાં છો કાઈ કામ ધંધો છે કે નઈ ..."
+            id="weeksRemainingHours"
+          ></span>
+        </div>
+        <div class="li-time-row">
+          <span>Leave Hours: </span>
+          <input
+            type="number"
+            name="leaveHoursInput"
+            id="leaveHoursInput"
+            value="0"
+          />
+          <span data-title="" id="leaveHoursText"></span>
+        </div>
+      </div>
+      <!-- <div class="li-timesheet-wrapper">
+        <span>
+          Your yesterday’s timesheet is
+          <a href="https://lierp.logisticinfotech.com/timesheet" target="_blank" class="li-timesheet-status">pending</a>
+        </span>
+      </div> -->
+      <div class="li-statistics-container li-statistics-bottom">
+        <div class="li-time-row">
+          <span>Total Required Hours: </span>
+          <span id="t_required_hour"></span>
+        </div>
+        <div class="li-time-row">
+          <span>Total Break Hours: </span>
+          <span id="t_break_hour"></span>
+        </div>
+        <div class="li-time-row">
+          <span>Total Hours: </span>
+          <span id="t_total_hour"></span>
+        </div>
+        <div class="li-time-row">
+          <span>Last Updated: </span>
+          <span id="last_updated"></span>
+        </div>
+        <div class="li-time-row">
+          <span>8:36, 17:12, 25:48, 34:24, 43:00</span>
+          <span>v0.0.6</span>
+        </div>
+      </div>
+      <!-- <div class="li-time-row">
+        <span>Show Badge: </span>
+        <span id="show_badge"><input type="checkbox" name="showBadge" id="showBadge"/></span>
+      </div> -->
+    </div>
+    <script src="moment.min.js"></script>
+    <script src="background.js" type="text/javascript"></script>
+    <script src="popup.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -1,0 +1,301 @@
+/**
+* Created by Nirav Adatiya
+*/
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,700&display=swap'); */
+:root {
+  --backgroundImage: url('https://www.logisticinfotech.com/wp-content/uploads/2019/10/white.gif');
+}
+
+body {
+  background-image: #ffffff;
+  /* font-family: 'Josefin Sans', sans-serif; */
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+
+.li-time-popup {
+  width: 350px;
+  height: 537px;
+  /* border: 1px solid red; */
+  padding: 20px 20px;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.dark.li-time-popup {
+  background-image: linear-gradient(-233deg, #26D0CE 8%, #1A2980 100%);
+}
+
+#sunIcon {
+  display: none;
+}
+
+.dark #sunIcon {
+  display: block;
+}
+
+.dark #moonIcon {
+  display: none;
+}
+
+.li-time-popup::before {
+  background: var(--backgroundImage) no-repeat;
+  background-position: center;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  opacity: 1;
+  z-index: 10;
+}
+
+.dark.li-time-popup::before {
+  /* background: url('./logoBackground_white.svg') no-repeat; */
+  /* background-position: left bottom; */
+}
+
+.animate .li-time-popup::before {
+  opacity: 0.1;
+  z-index: 0;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+}
+
+.li-day-nigh-icon {
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.li-day-nigh-icon img {
+  height: 25px;
+  width: 25px;
+  margin-right: -10px;
+  margin-top: -10px;
+}
+
+.li-title {
+  text-align: center;
+}
+
+.li-title span {
+  position: absolute;
+  top: -87px;
+  font-size: 162px;
+  font-weight: bold;
+  left: -20px;
+  opacity: 0.14;
+  color: #20b1af;
+}
+
+.dark .li-title span {
+  color: #d8d8d8;
+}
+
+.li-title h2 {
+  color: #20b1af;
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 24px;
+  margin-bottom: 10px;
+}
+
+.dark .li-title h2 {
+  color: #fff;
+}
+
+.li-calendar-date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.li-calendar-date .li-calendar-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.li-calendar-date .li-calendar-icon.color {
+  display: block;
+}
+
+.dark .li-calendar-date .li-calendar-icon.color {
+  display: none;
+}
+
+.li-calendar-date .li-calendar-icon.white {
+  display: none;
+}
+
+.dark .li-calendar-date .li-calendar-icon.white {
+  display: block;
+}
+
+.li-calendar-date .li-today-date {
+  color: #727272;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 16px;
+  margin-top: 4px;
+}
+
+.dark .li-calendar-date .li-today-date {
+  color: #fff;
+}
+
+.li-statistics-container {
+  padding: 16px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 20px 6px rgba(32, 177, 175, 0.10);
+  border-radius: 5px;
+  /* margin-top: 42px; */
+}
+
+.dark .li-statistics-container {
+  background: none;
+  box-shadow: unset;
+}
+
+.li-statistics-container .li-time-row {
+  margin: 16px 7px;
+  display: flex;
+  flex: 1;
+  max-width: 100%;
+  justify-content: space-between;
+}
+
+
+.li-time-row span {
+  font-size: 17px;
+  color: #727272;
+}
+
+.dark .li-time-row span {
+  color: #fff;
+}
+
+.li-timesheet-wrapper {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.dark .li-timesheet-wrapper {
+  color: #fff;
+}
+
+.li-timesheet-wrapper .li-timesheet-status {
+  text-transform: uppercase;
+  color: #ff4646;
+  font-weight: 700;
+  text-decoration: underline;
+
+}
+
+.li-timesheet-wrapper .li-timesheet-status.filled {
+  color: green;
+}
+
+.li-statistics-bottom {
+  box-shadow: none;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin-bottom: 0px;
+  background: transparent;
+}
+
+#leaveHoursInput {
+  z-index: 1;
+  height: 20px;
+  border: none;
+  width: 40px;
+  color: red;
+  font-size: 16px;
+  position: absolute;
+  left: 150px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]:focus {
+  outline: none;
+}
+/*
+.li-time-popup span:first-child{
+  font-weight: 500;
+}
+.li-time-popup span:last-child{
+  font-weight: 400;
+}
+
+.li-time-row{
+  display: flex;
+  margin-bottom: 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.li-time-row:last-child{
+  margin-bottom: 0px;
+}
+
+.li-modal-body{
+  display: flex;
+  flex-wrap: wrap;
+} */
+
+
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+
+[data-title]:after {
+  content: attr(data-title);
+  position: absolute;
+  font-size: 14px;
+  bottom: -2.2em;
+  right: 0;
+  word-break: break-all;
+  padding: 4px 4px 4px 8px;
+  color: #222;
+  white-space: nowrap;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f8f8f8), color-stop(1, #cccccc));
+  background-image: -webkit-linear-gradient(top, #f8f8f8, #cccccc);
+  background: black;
+  color: #fff;
+  opacity: 0;
+  z-index: 99999;
+  visibility: hidden;
+}
+
+[data-title] {
+  position: relative;
+}
+
+.li-color-primary {
+  color: #20b1af !important;
+}
+
+.dark .li-color-primary {
+  color: yellow !important;
+}
